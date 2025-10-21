@@ -8,29 +8,25 @@ int reverseDigits(int num)
 }
 int isArmstrong(int num)
 {
-    int temp=num,digits=0,sum=0;
+    int org=num,count=0,sum=0;
     double b;
-    while (temp!=0)
+    while (org!=0)
     {
-        digits++;
-        temp/=10;
+        count++;
+        org=org/10;
     }
-    temp=num;
-    while (temp!=0)
+    org=num;
+    while (org!=0)
     {
-        int a=temp%10;
-        b=pow(a,digits);
+        int a=org%10;
+        b=pow(a,count);
         sum+=b;
-        temp/=10;
+        org/=10;
     }
     if (sum==num)
-    {
         return 1;
-    }
     else
-    {
         return 0;
-    }
 }
 int isAdams(int num)
 {
@@ -93,4 +89,5 @@ int isPrimePalindrome(int num)
     {
         return 0;
     }
+
 }
