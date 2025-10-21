@@ -30,11 +30,11 @@ int isArmstrong(int num)
 }
 int isAdams(int num)
 {
-    int originalSquare=num*num;
-    int reversedNum=reverseDigits(num);
-    int reversedSquare=reversedNum*reversedNum;
-    int reversedSquareReversed=reverseDigits(reversedSquare);
-    if (originalSquare==reversedSquareReversed)
+    int Square=num*num;
+    int revNum=reverseDigits(num);
+    int revSquare=revNum*revNum;
+    int Square1=reverseDigits(revSquare);
+    if (Square==Square1)
     {
         return 1;
     }
@@ -91,3 +91,4 @@ int isPrimePalindrome(int num)
     }
 
 }
+
