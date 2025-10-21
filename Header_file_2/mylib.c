@@ -46,7 +46,7 @@ int isAdams(int num)
 int Prime(int num)
 {
     int org=num,sum=0;
-    if(num==1)
+    if(num<=1)
         return 0;
     else{
         for(int i=1;i<=num;i++)
@@ -57,9 +57,8 @@ int Prime(int num)
 }
 if(sum<=2)
     return 1;
-else {
+else 
 return 0;
-}
     }
 }
 int Palindrome(int num)
@@ -86,5 +85,6 @@ int isPrimePalindrome(int num)
     }
 
 }
+
 
 
