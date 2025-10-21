@@ -38,11 +38,11 @@ int reverseDigits(int num)
 }
 int isAdams(int num)
 {
-    int originalSquare=num*num;
-    int reversedNum=reverseDigits(num);
-    int reversedSquare=reversedNum*reversedNum;
-    int reversedSquareReversed=reverseDigits(reversedSquare);
-    if (originalSquare==reversedSquareReversed)
+    int Square=num*num;
+    int revNum=reverseDigits(num);
+    int revSquare=revNum*revNum;
+    int Square1=reverseDigits(revSquare);
+    if (Square==Square1)
     {
         return 1;
     }
@@ -53,27 +53,20 @@ int isAdams(int num)
 }
 int Prime(int num)
 {
-    int temp=num,flag=0;
-    if (temp<=1)
-    {
-        return 0;
-    }
-    for (int i=2;i*i<=temp;i++)
-    {
-        if (temp%i==0)
-        {
-            flag=1;
-            break;
-        }
-    }
-    if (flag==0)
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
+    int org=num,sum=0;
+    if(num<=1)
+retrun 0;
+else{
+for(int i=1;i<=num;i++)
+{
+if(num%i==0)
+sum++;
+}
+if(sum<=2)
+return 1;
+else
+return 0;
+}
 }
 int Palindrome(int num)
 {
@@ -158,3 +151,4 @@ int main()
     return 0;
 
 }
+
