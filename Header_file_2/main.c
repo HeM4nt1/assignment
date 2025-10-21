@@ -5,8 +5,21 @@ int main()
     int num;
     printf("Enter a number: ");
     scanf("%d",&num);
-    printf("isArmstrong(%d)=%s\n",num,isArmstrong(num)?"Yes":"No");
-    printf("isAdams(%d)=%s\n",num,isAdams(num)?"Yes":"No");
-    printf("isPrimePalindrome(%d)=%s\n",num,isPrimePalindrome(num)?"Yes":"No");
+    int x=isArmstrong(num);
+    if(x==1)
+        printf("the entered number is an armstrong number");
+    else
+        printf("the entered number is not an armstrong number");
+    int y=isAdams(num);
+    if(y==1)
+        printf("the enterd number is an adam number");
+    else
+        printf("the enterd number is not an armstrong number");
+    int z=isPrimePalindrome(num);
+    if(z==1)
+        printf("the entered number is a prime and pailndrome");
+    else
+        printf("the  enterd number is not both prime and palindrome");
     return 0;
+
 }
